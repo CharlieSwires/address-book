@@ -1,6 +1,6 @@
 address-book
 ------------
-<p>in git bash</p>
+<p>in <a src="https://git-scm.com/downloads">git bash</a></p>
 <p>git clone https://github.com/CharlieSwires/address-book</p>
 
 <p>This contains both the java and React</p>
@@ -8,11 +8,11 @@ address-book
 build
 -----
 <p>cd address-book/src/main/webapp/address-app</p>
-<p>npm run build</p>
+<p>npm run build (you'll need to download <a src="https://nodejs.org/dist/v22.18.0/node-v22.18.0-x64.msi">node</a>)</p>
 <p>cd ../../../..</p>
 <p>you'll need an application.properties file with the DB username and password
 URL</p>
-<p>mvn package</p>
+<p>mvn package (you'll need <a src="https://builds.openlogic.com/downloadJDK/openlogic-openjdk/17.0.16+8/openlogic-openjdk-17.0.16+8-windows-x64.msi">openjdk17</a> and <a src="https://maven.apache.org/guides/getting-started/windows-prerequisites.html">maven</a>)</p>
 
 <p>produces address-book.war in target</p>
 
@@ -21,6 +21,7 @@ URL</p>
 
 deploy
 ------
+<p> You'll need <a src="https://www.docker.com/products/docker-desktop/">docker</a></p>
 <p>docker build --tag address:latest .</p>
 <p>docker run  --env-file ./env.list --name container2 --link container1 -d -p 8887:8080 address:latest</p>
 

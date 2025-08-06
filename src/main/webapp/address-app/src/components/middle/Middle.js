@@ -165,11 +165,11 @@ updatePrintableItem(forename, surname) {
     a.style.display = 'none';
     a.href = url;
     // the filename you want
-    //if(process.env.REACT_APP_OVERRIDE_WITH_HTML==='on'){
+    if(process.env.REACT_APP_OVERRIDE_WITH_HTML==='on'){
     	a.download = 'result.html';
-    //} else {
-    //	a.download = 'result.pdf';
-    //}
+    } else {
+    	a.download = 'result.pdf';
+    }
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
